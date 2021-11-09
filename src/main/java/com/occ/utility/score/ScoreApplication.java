@@ -7,10 +7,6 @@ import org.slf4j.LoggerFactory;
 import com.occ.utility.score.service.ScoreGenerator;
 import com.occ.utility.score.serviceImpl.ScoresForNames;
 
-/**
- * Hello world!
- *
- */
 public class ScoreApplication {
 	private static final Logger log = LoggerFactory.getLogger(ScoresForNames.class);
 
