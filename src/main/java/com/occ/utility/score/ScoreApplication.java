@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.occ.utility.score.service.ScoreGenerator;
+import com.occ.utility.score.serviceImpl.ScoreGeneratorFactory;
 import com.occ.utility.score.serviceImpl.ScoresForNames;
 
 public class ScoreApplication {
@@ -12,7 +13,8 @@ public class ScoreApplication {
 
     public static void main( String[] args ){
     	long startTime = System.currentTimeMillis();
-    	ScoreGenerator scoreGenerator = new ScoresForNames();
+    	ScoreGeneratorFactory scoreGeneratorFactory = new ScoreGeneratorFactory();
+    	ScoreGenerator scoreGenerator = scoreGeneratorFactory.getScoreGenerator("simple");
     	scoreGenerator.calculateScore(new File(args[0]));
     	log.info("Time taken for calculating score for the file is :: {}", (System.currentTimeMillis() - startTime));
     }
