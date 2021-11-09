@@ -24,7 +24,11 @@ How to run the Application: -
 	c. mvn install
 	d. java -Dfile.encoding=UTF-8 -classpath <target classes path>:<.m2 path>/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:<.m2 path>/.m2/repository/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar com.occ.utility.score.ScoreApplication <text file path>
 	   ex: - java -Dfile.encoding=UTF-8 -classpath /Users/hemanthvuyyuru/Documents/occScreeningProblem/score-generator/target/classes:/Users/hemanthvuyyuru/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/Users/hemanthvuyyuru/.m2/repository/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar com.occ.utility.score.ScoreApplication "/Users/hemanthvuyyuru/Downloads/OCC Take Home Coding names.txt"
-	Note: - The file path should the first program argument. 
+	Note: - The file path should the first program argument.
+
+Expected Responses:-
+1. In any cases of an expection, "-1" will be returned.
+2. In case of successful processing, the calculated score will be returned.
 	
 Test cases have been included in src/test/java package.
 
